@@ -1,0 +1,33 @@
+server:
+  port: 1867
+  
+logging:
+  level:
+    ca:
+      killam:  DEBUG
+    org:
+      springframework:
+        cache: WARN
+        security: WARN
+        web: WARN
+        
+management:
+  endpoints:
+    health:
+      show-details:  always
+    web:
+      exposure:
+        include:  beans,caches,health,info,metrics,mappings
+        
+spring:
+  error:
+    include-stacktrace: always
+    whitelabel:
+      enabled: true
+  mvc:
+    view:
+      prefix:  /WEB-INF/jsp/
+      suffix:  .jsp
+      
+andrew:
+  root-dir:  c:\\temp\\pictures
